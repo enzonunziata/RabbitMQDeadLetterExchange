@@ -1,0 +1,44 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="row">
+    <div class="col-xxl-3">
+        <div class="row p-1">
+            <div class="col-2">Type</div>
+            <div class="col-10">
+                <select id="messageType">
+                    <option value="A">MessageA</option>
+                    <option value="B">MessageB</option>
+                    <option value="C">MessageC</option>
+                </select>
+            </div>
+        </div>
+        <div class="row p-1">
+            <div class="col-2">Message</div>
+            <div class="col-10"><input type="text" class="w-100" id="messageComment" /></div>
+        </div>
+        <div class="row p-1">
+            <div class="col-12 text-end">
+                <input type="button" id="sendButton" value="Send Message" />
+                <input type="button" id="sendWithException" value="Send With Exception" />
+            </div>
+        </div>
+    </div>
+    <div class="col-xxl-9">
+        <div class="row p-1">
+            <div class="col-12">
+                <input type="button" id="clearList" value="Clear list" />
+                <ul id="messagesList"></ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+@section Scripts {
+    <script src="~/js/signalr/dist/browser/signalr.js"></script>
+    <script src="~/js/rabbitmq.js"></script>
+}
